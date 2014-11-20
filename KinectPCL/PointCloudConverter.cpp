@@ -86,7 +86,7 @@ void PointCloudConverter::initializeCloudFromDFR(std::string fileName) {
 				x = stof(splitLine[0]);
 				y = stof(splitLine[1]);
 				z = stof(splitLine[2]);
-				cloud->push_back(pcl::PointXYZ(x * 200,y * -200,z * 200));
+				cloud->push_back(pcl::PointXYZ(x * -200,y * -200,z * 200));
 				//cout << ++lineCounter << ": " << x << ";" << y << ";" << z << endl;
 				splitLine.clear();
 			}
