@@ -5,6 +5,8 @@
 *.suo
 *.user
 *.sln.docstates
+CMakeCache.txt
+CMakeFiles/
 
 # Build results
 [Dd]ebug/
