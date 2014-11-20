@@ -5,6 +5,8 @@
 #include <pcl/io/pcd_io.h>
 #include <string>
 #include <vector>
+
+using namespace std;
 //#include <pcl/visualization/cloud_viewer.h>
 
 
@@ -21,6 +23,10 @@ static const int cDepthHeight = 424;
 public:
 	PointCloudConverter(void);
 	~PointCloudConverter(void);
-	void initializeCloud();
+	void initializeCloudFromTXT(std::string fileName);
+	void initializeCloudFromDFR(std::string fileName);
+
+private:
+	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud;
 };
 

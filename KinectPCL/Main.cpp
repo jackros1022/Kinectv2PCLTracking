@@ -6,14 +6,16 @@
 
 #include <fstream>
 #include <iostream>
+#include <string>
 #include "PointCloudConverter.h"
 
 using namespace std;
 
 int main() {
 
-	PointCloudConverter pconverter;
-	pconverter.initializeCloud();
+	PointCloudConverter pcconverter;
+	pcconverter.initializeCloudFromDFR("frames/testFrame.dfr");
+	//pcconverter.initializeCloudFromTXT("clouddata.txt");
 
 	return 0;
 }
