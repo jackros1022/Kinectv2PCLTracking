@@ -1,0 +1,3 @@
+C:/Users/sroettering/Documents/HCI Projekt/KinectPCL/KinectPCL/CMakeFiles/ALL_BUILD.dir
+C:/Users/sroettering/Documents/HCI Projekt/KinectPCL/KinectPCL/CMakeFiles/viewer.dir
+C:/Users/sroettering/Documents/HCI Projekt/KinectPCL/KinectPCL/CMakeFiles/ZERO_CHECK.dir
