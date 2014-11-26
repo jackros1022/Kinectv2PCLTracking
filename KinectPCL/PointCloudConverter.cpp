@@ -60,15 +60,15 @@ void PointCloudConverter::initializeCloudFromTXT(string fileName) {
 	}
 
 
-	// create cloud viewer
-    pcl::visualization::CloudViewer viewer("Cloud Viewer");
+	//// create cloud viewer
+ //   pcl::visualization::CloudViewer viewer("Cloud Viewer");
 
-	viewer.showCloud(cloud);
-      
-	while (!viewer.wasStopped ());
+	//viewer.showCloud(cloud);
+ //     
+	//while (!viewer.wasStopped ());
 }
 
-void PointCloudConverter::initializeCloudFromDFR(std::string fileName) {
+pcl::PointCloud<pcl::PointXYZ>::Ptr PointCloudConverter::initializeCloudFromDFR(std::string fileName) {
 	string line;
 	std::vector<std::string> splitLine;
 	stringstream sstr;
@@ -92,13 +92,19 @@ void PointCloudConverter::initializeCloudFromDFR(std::string fileName) {
 			}
 		}
 		clouddata.close();
+
+		return cloud;
 	}
 
-	// create cloud viewer
-    pcl::visualization::CloudViewer viewer("Cloud Viewer");
+	//// create cloud viewer
+ //   pcl::visualization::CloudViewer viewer("Cloud Viewer");
 
-	viewer.showCloud(cloud);
-      
-	while (!viewer.wasStopped ());
+	//viewer.showCloud(cloud);
+ //     
+	//while (!viewer.wasStopped ());
 
+}
+
+pcl::PointCloud<pcl::PointXYZ>::Ptr PointCloudConverter::getPointCloud() {
+	return cloud;
 }

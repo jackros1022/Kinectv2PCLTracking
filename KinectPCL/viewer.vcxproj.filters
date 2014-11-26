@@ -7,9 +7,21 @@
     <ClCompile Include="PointCloudConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SegmentationTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PointCloudConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SegmentationTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -18,10 +30,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{F1E61605-FBA7-4588-BA47-278F67A9FF63}</UniqueIdentifier>
+      <UniqueIdentifier>{268EA769-8A34-48CA-A3AD-7D58B1AD6066}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{C5075A65-68E6-4C4A-91C4-42CA1E093EA8}</UniqueIdentifier>
+      <UniqueIdentifier>{41A4F5EE-B66D-4630-A896-0D68399B5D45}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
