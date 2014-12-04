@@ -59,12 +59,9 @@ void PointCloudConverter::initializeCloudFromTXT(string fileName) {
 		clouddata.close();
 	}
 
-
-	//// create cloud viewer
- //   pcl::visualization::CloudViewer viewer("Cloud Viewer");
-
+	// create cloud viewer
+	//pcl::visualization::CloudViewer viewer("Cloud Viewer");
 	//viewer.showCloud(cloud);
- //     
 	//while (!viewer.wasStopped ());
 }
 
@@ -95,13 +92,6 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr PointCloudConverter::initializeCloudFromDFR(
 
 		return cloud;
 	}
-
-	//// create cloud viewer
- //   pcl::visualization::CloudViewer viewer("Cloud Viewer");
-
-	//viewer.showCloud(cloud);
- //     
-	//while (!viewer.wasStopped ());
 
 }
 

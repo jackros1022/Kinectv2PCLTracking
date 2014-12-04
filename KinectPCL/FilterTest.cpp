@@ -15,9 +15,38 @@ FilterTest::~FilterTest(void)
 {
 }
 
-
-void FilterTest::testPassThrough(void) {
+void FilterTest::passThroughCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud) {
 	cerr << "filter filter filter :-D" << endl;
+
+
+ //pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
+
+  std::cerr << "Cloud before filtering: " << cloud->points.size() << std::endl;
+
+  cerr << "checkpoint A" << endl;
+
+  // Create the filtering object
+  pcl::PassThrough<pcl::PointXYZ> pass;
+  pass.setInputCloud (cloud);
+  pass.setFilterFieldName ("z");
+  pass.setFilterLimits (0.0, 1.0);
+  //pass.setFilterLimitsNegative (true);
+  pass.filter (*cloud_filtered);
+
+
+  std::cerr << "Cloud after filtering: " << cloud_filtered->points.size () << std::endl;
+
+  	pcl::visualization::CloudViewer viewer("cloud viewer");
+	//viewer.showCloud(cloud);
+	viewer.showCloud(cloud_filtered);
+	while (!viewer.wasStopped());
+
+   //cin.get();
+
+}
+void FilterTest::testPassThrough(void) {
+	cerr << "filter filter filter" << endl;
 
 
  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
@@ -60,10 +89,11 @@ void FilterTest::testPassThrough(void) {
                         << cloud_filtered->points[i].z << std::endl;
 
 
- // 	pcl::visualization::CloudViewer viewer("cloud viewer");
+	// 	pcl::visualization::CloudViewer viewer("cloud viewer");
+	//viewer.showCloud(cloud);
 	//viewer.showCloud(cloud_filtered);
 	//while (!viewer.wasStopped());
 
-  //cin.get();
+   cin.get();
 
 }

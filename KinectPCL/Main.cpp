@@ -19,22 +19,26 @@ int main() {
 
 	// init point cloud
 	PointCloudConverter pcconverter;
-	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = pcconverter.initializeCloudFromDFR("frames/testFrame.dfr");
+	//pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = pcconverter.initializeCloudFromDFR("frames/testFrame.dfr");
+	//pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = pcconverter.initializeCloudFromDFR("frames/tisch_mit_alles.dfr");
+
+	pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = pcconverter.initializeCloudFromDFR("frames/tisch_mit_3_zylinder.dfr");
+	//pcl::PointCloud<pcl::PointXYZ>::Ptr cloud = pcconverter.initializeCloudFromDFR("frames/cylinder_in_the_air.dfr");
+
 	//pcconverter.initializeCloudFromTXT("clouddata.txt");
 
 	cerr << "PointCloud has: " << cloud->points.size() << " data points." << endl;
 
-	//SegmentationTest segTest;
-	//segTest.runSegmentation(cloud);
+	SegmentationTest segTest;
+	segTest.runCylinderSegmentation(cloud);
 
 	//FilterTest filterTest;
-	//filterTest.testPassThrough();
+	//filterTest.passThroughCloud(cloud);
 
-	// create cloud viewer
-	pcl::visualization::CloudViewer viewer("cloud viewer");
-	viewer.showCloud(cloud);
-	while (!viewer.wasStopped());
-	
+	//// create cloud viewer
+	//pcl::visualization::CloudViewer viewer("cloud viewer");
+	//viewer.showCloud(cloud);
+	//while (!viewer.wasStopped());
 
 	return 0;
 }

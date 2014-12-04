@@ -1,4 +1,4 @@
-# Install script for directory: C:/Dropbox/dev/kinectdev/Kinectv2PCLTracking/KinectPCL
+# Install script for directory: W:/Dropbox/dev/kinectdev/Kinectv2PCLTracking/KinectPCL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,7 +33,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "C:/Dropbox/dev/kinectdev/Kinectv2PCLTracking/KinectPCL/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "W:/Dropbox/dev/kinectdev/Kinectv2PCLTracking/KinectPCL/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "C:/Dropbox/dev/kinectdev/Kinectv2PCLTracking/KinectPCL/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "W:/Dropbox/dev/kinectdev/Kinectv2PCLTracking/KinectPCL/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()
