@@ -5,13 +5,17 @@
 #include <string>
 #include <vector>
 
-class FilterTest
-{
+class FilterTest{
 public:
 	FilterTest(void);
 	~FilterTest(void);
 
 	void testPassThrough(void);
 	void passThroughCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr);
+	void radiusOutlierRemoval(pcl::PointCloud<pcl::PointXYZ>::Ptr);
+	void staticOutlierFilter(pcl::PointCloud<pcl::PointXYZ>::Ptr);
+	void conditionalRemoval(pcl::PointCloud<pcl::PointXYZ>::Ptr);
+	void voxelGrid(pcl::PointCloud<pcl::PointXYZ>::Ptr);
+
 };
 

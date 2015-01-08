@@ -30,10 +30,10 @@
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{CB7D66CE-0DA9-454C-9B91-C377AA710C16}</UniqueIdentifier>
+      <UniqueIdentifier>{FE5C6845-916E-4833-A913-B036AE9E99C3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{77182AEA-7781-4BE0-A0DA-22A232A7E155}</UniqueIdentifier>
+      <UniqueIdentifier>{5EF26491-C764-4B77-867A-6538DAF69187}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
